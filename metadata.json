@@ -1,0 +1,6 @@
+{
+  "name": "finance toolkit",
+  "description": "An application to view various financial data for a given stock ticker, including history, company info, news, and more, using the yfinance API.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
