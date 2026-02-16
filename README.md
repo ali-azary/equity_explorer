@@ -94,4 +94,4 @@ npm run preview  # preview production build locally
 
 ## License
 
-Add a license file if you plan to publish/distribute this project (e.g., MIT, Apache-2.0).
+MIT
