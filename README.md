@@ -36,11 +36,7 @@ Market / company data is fetched from a hosted yfinance-style API:
 
 - Base API: `https://yf-api-c0nm.onrender.com`
 
-Because browsers block cross-origin requests by default, requests are routed through a public proxy:
-
-- Proxy: `https://corsproxy.io/?`
-
-If you self-host, you can remove the proxy and/or point to your own API.
+Requests are made directly from the browser (no public CORS proxy). The API must therefore return appropriate CORS headers. If you self-host, enable CORS on your API and update `API_BASE` in `services/stockService.ts`.
 
 ## Local setup
 
@@ -93,7 +89,7 @@ npm run preview  # preview production build locally
 ## Troubleshooting
 
 - “Could Not Load Data” / empty responses: verify the ticker symbol and try another view (some endpoints may not exist for all tickers).
-- CORS/network errors: `corsproxy.io` or the hosted API may be rate-limited/down. Replace `PROXY_URL` / `API_BASE` in `services/stockService.ts` for a more reliable setup.
+- CORS/network errors: the hosted API may be rate-limited/down or not sending the required CORS headers. Point `API_BASE` in `services/stockService.ts` to your own API (with CORS enabled) for a more reliable setup.
 - SWOT tool errors: confirm `GEMINI_API_KEY` is set in `.env.local` and restart `npm run dev`.
 
 ## License
