@@ -94,4 +94,4 @@ npm run preview  # preview production build locally
 
 ## License
 
-MIT
+This project is licensed under the MIT License. See the `LICENSE` file for details.
